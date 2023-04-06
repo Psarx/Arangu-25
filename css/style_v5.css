@@ -11288,13 +11288,14 @@ Cyber Defenses Area CSS
   list-style-type: none;
   display: block;
   border: none;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
 .cyber-defenses-list-tabs .nav .nav-item {
   display: inline-block;
   margin-right: 20px;
+  margin-bottom:10px;
   
 }
 
@@ -11356,6 +11357,11 @@ Cyber Defenses Area CSS
 .cyber-defenses-content p {
   margin-bottom: 0;
   color: #ABA8AE;
+}
+.workshop p {
+  padding-bottom: 24px;
+  color: #ABA8AE;
+  border-bottom: 1px solid #452C5B;
 }
 
 .cyber-defenses-content .cyber-list {
