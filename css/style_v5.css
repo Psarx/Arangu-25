@@ -189,6 +189,10 @@ ul {
 textarea.form-control {
   height: auto;
 }
+/* #about,#autoshow,#fisatcup{
+  background-color: #6812be86;
+} */
+
 
 .ptb-100 {
   padding-top: 100px;
