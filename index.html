@@ -23,7 +23,7 @@
       content="nautilus, nautilus 2023, fisat, federal institute of science & technology, techfest kerala"
       name="keywords"
     />
-    <meta name="theme-color" content="#1C0531" />
+    <meta name="theme-color" content="#191420" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -141,13 +141,13 @@
 
       /* Handle */
       ::-webkit-scrollbar-thumb {
-        background: #39e8f5;
+        background: #400a6f;
       }
 
       /* Handle on hover */
       ::-webkit-scrollbar-thumb:hover {
         /* background: #d80650; */
-        background: #39e8f5;
+        background: #400a6f;
       }
     </style>
   </head>
@@ -291,21 +291,43 @@
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-12">
             <div class="new-main-banner-black-image">
-              <img src="images/wmn.svg" alt="image" />
+              <img class="galaxy" src="images/SPACE.svg" alt="image" />
             </div>
           </div>
           <div class="col-lg-6 col-md-12 order-md-first">
             <div class="new-main-banner-black-content">
               <h1
                 class="wow animate__animated animate__fadeInLeft icefoss_title"
-                data-wow-delay="1s"
+                data-wow-delay="0.2s"
               >
-                NAUTILUS
+                <!-- NAUTILUS -->
+                <!-- The two texts -->
+                <div id="container-text">
+                  <span id="text1"></span>
+                  <span id="text2"></span>
+                </div>
+
+                <!-- The SVG filter used to create the merging effect -->
+                <svg id="filters">
+                  <defs>
+                    <filter id="threshold">
+                      <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+                      <feColorMatrix
+                        in="SourceGraphic"
+                        type="matrix"
+                        values="1 0 0 0 0
+                                0 1 0 0 0
+                                0 0 1 0 0
+                                0 0 0 255 -140"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
               </h1>
               <h3></h3>
               <p
                 class="wow animate__animated animate__fadeInRight"
-                data-wow-delay="1s"
+                data-wow-delay="0.4s"
               >
                 Prepare to embark on a voyage of technical wonder and innovation
                 at Nautilus, the highly anticipated techno cultural fest
@@ -319,7 +341,7 @@
               <!-- <img src="./images/hackfit.svg" alt="" srcset=""> -->
               <ul
                 class="banner-btn wow animate__animated animate__fadeInUp"
-                data-wow-delay="1s"
+                data-wow-delay="0.5s"
               >
                 <li>
                   <a
@@ -344,10 +366,6 @@
           </div>
         </div>
       </div>
-
-      <div class="new-main-banner-black-shape">
-        <img src="images/line-bg.png" alt="image" />
-      </div>
     </section>
     <!-- End New Main Banner Area -->
 
@@ -360,7 +378,8 @@
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-12">
             <div class="safer-world-image">
-              <img src="images/safer-world-2.png" alt="image" loading="lazy" />
+              <img src="images/nautilus2.png" alt="image" loading="lazy" />
+              <!-- <img src="images/btm-dots.png" alt="image" loading="lazy" /> -->
             </div>
           </div>
 
@@ -408,7 +427,7 @@
               <div class="content-text p-4 px-5 align-item-stretch">
                 <div class="text-center">
                   <!-- <a href="#" class="share"><span class="icon-share"></span></a> -->
-                  <h3 class="mb-3 line" style="color: #39e8f5 !important">
+                  <h3 class="mb-3 line" style="color: #400a6f !important">
                     Forms
                   </h3>
                   <div class="container" id="registrationForms">
@@ -560,7 +579,7 @@
                 <div class="col-lg-6 col-md-12">
                   <div class="cyber-defenses-image">
                     <img
-                      src="images/Electric car-ws.svg"
+                      src="images/Electric car-pana.svg"
                       class="rounded-circle"
                       alt="image"
                       loading="lazy"
@@ -604,7 +623,7 @@
                 <div class="col-lg-6 col-md-12">
                   <div class="cyber-defenses-image">
                     <img
-                      src="images/go.svg"
+                      src="images/Code typing-bro.svg"
                       class="rounded-circle"
                       alt="image"
                       loading="lazy"
@@ -775,16 +794,21 @@
       </div>
     </div>
 
-    <div class="safer-world-area-without-color pt-100 " id="autoshow">
+    <div class="safer-world-area-without-color pt-100" id="autoshow">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-12">
             <div class="safer-world-image autoshowimg">
-              <img src="./images/autoshow.png" style="scale: 1.5;" alt="" srcset="">
+              <img
+                src="./images/autoshow.png"
+                style="scale: 1.5"
+                alt=""
+                srcset=""
+              />
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-12" style="z-index: 10;">
+          <div class="col-lg-6 col-md-12" style="z-index: 10">
             <div class="safer-world-content white-color-content">
               <h3>AUTO SHOW</h3>
               <p>
@@ -926,7 +950,7 @@
                 <div class="col-lg-6 col-md-12">
                   <div class="cyber-defenses-image">
                     <img
-                      src="images/game.svg"
+                      src="images/circuit-hunt.svg"
                       class="rounded-circle"
                       alt="image"
                       loading="lazy"
@@ -2242,7 +2266,7 @@
       <div class="copyright-style-two-with-color">
         <p>
           Copyright @ 2023 <b>NAUTILUS</b> All Rights Reserved by
-          <a href="https://fisat.ac.in" style="color: #39e8f5 !important;" target="_blank">FISAT</a>
+          <a href="https://fisat.ac.in" target="_blank">FISAT</a>
         </p>
       </div>
       <div class="footer-shape-1">

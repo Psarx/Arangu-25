@@ -1,10 +1,101 @@
+
+const elts = {
+  text1: document.getElementById("text1"),
+  text2: document.getElementById("text2")
+};
+
+// The strings to morph between. You can change these to anything you want!
+const texts = [
+  "നോട്ടിലസ്",
+  "Nautilus",
+  "नॉटिलस",
+  // "நாட்டிலஸ்",
+  // "నాటిలస్",
+];
+
+// Controls the speed of morphing.
+const morphTime = 2.50;
+const cooldownTime = 0.25;
+
+let textIndex = texts.length - 1;
+let time = new Date();
+let morph = 0;
+let cooldown = cooldownTime;
+
+elts.text1.textContent = texts[textIndex % texts.length];
+elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+
+function doMorph() {
+  morph -= cooldown;
+  cooldown = 0;
+
+  let fraction = morph / morphTime;
+
+  if (fraction > 1) {
+    cooldown = cooldownTime;
+    fraction = 1;
+  }
+
+  setMorph(fraction);
+}
+
+// A lot of the magic happens here, this is what applies the blur filter to the text.
+function setMorph(fraction) {
+  // fraction = Math.cos(fraction * Math.PI) / -2 + .5;
+
+  elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+  elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+  fraction = 1 - fraction;
+  elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+  elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+  elts.text1.textContent = texts[textIndex % texts.length];
+  elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+}
+
+function doCooldown() {
+  morph = 0;
+
+  elts.text2.style.filter = "";
+  elts.text2.style.opacity = "100%";
+
+  elts.text1.style.filter = "";
+  elts.text1.style.opacity = "0%";
+}
+
+// Animation loop, which is called every frame.
+function animate() {
+  requestAnimationFrame(animate);
+
+  let newTime = new Date();
+  let shouldIncrementIndex = cooldown > 0;
+  let dt = (newTime - time) / 1000;
+  time = newTime;
+
+  cooldown -= dt;
+
+  if (cooldown <= 0) {
+    if (shouldIncrementIndex) {
+      textIndex++;
+    }
+
+    doMorph();
+  } else {
+    doCooldown();
+  }
+}
+
+// Start the animation.
+animate();
+
 function scrollthere(item, event) {
   console.log(event);
   var element = document.querySelector(`#${item}`);
 
   element.scrollIntoView();
 
-  
+
   $(".meanmenu-reveal").trigger('click')
 
 
@@ -45,7 +136,7 @@ function scrollthere(item, event) {
           console.log(data.response)
           let num = 0;
           if (data.response.hackathon.status) {
-            $(".hackfit-btn").attr("href",data.response.hackathon.url)
+            $(".hackfit-btn").attr("href", data.response.hackathon.url)
             html_start += `<div class="col-md-4 ">
 						<a href="${data.response.hackathon.url}">
 							<div class="card p-4" role="button">
@@ -60,9 +151,9 @@ function scrollthere(item, event) {
 					</div>`;
             num += 1;
           }
-          
+
           if (data.response.prompt_engineering.status) {
-            $('.promptly-').attr("href",data.response.prompt_engineering.url)
+            $('.promptly-').attr("href", data.response.prompt_engineering.url)
             html_start += `<div class="col-md-4">
 						<a href="${data.response.prompt_engineering.url}">
 						<div class="card p-4" role="button">
@@ -76,7 +167,7 @@ function scrollthere(item, event) {
             num += 1;
           }
           if (data.response.workshop.rust.status) {
-            $('.rust-btn').attr("href",data.response.workshop.rust.url)
+            $('.rust-btn').attr("href", data.response.workshop.rust.url)
             html_start += `<div class="col-md-4">
 						<a href="${data.response.workshop.rust.url}">
 						<div class="card p-4" role="button">
@@ -91,7 +182,7 @@ function scrollthere(item, event) {
           }
           if (data.response.workshop.ar.status) {
             // console.log(data.response)
-            $(".ar-btn").attr("href",data.response.workshop.ar.url)
+            $(".ar-btn").attr("href", data.response.workshop.ar.url)
             html_start += `<div class="col-md-4">
 						<a href="${data.response.workshop.ar.url}">
 							<div class="card p-4" role="button">
@@ -106,7 +197,7 @@ function scrollthere(item, event) {
           }
           if (data.response.workshop.go.status) {
             // console.log(data.response)
-            $(".go-btn").attr("href",data.response.workshop.go.url)
+            $(".go-btn").attr("href", data.response.workshop.go.url)
             html_start += `<div class="col-md-4">
 						<a href="${data.response.workshop.go.url}">
 							<div class="card p-4" role="button">
@@ -121,7 +212,7 @@ function scrollthere(item, event) {
           }
           if (data.response.workshop.devops.status) {
             // console.log(data.response)
-            $(".devops-btn").attr("href",data.response.workshop.devops.url)
+            $(".devops-btn").attr("href", data.response.workshop.devops.url)
             html_start += `<div class="col-md-4">
 						<a href="${data.response.workshop.devops.url}">
 							<div class="card p-4" role="button">
@@ -136,7 +227,7 @@ function scrollthere(item, event) {
           }
           if (data.response.workshop.web.status) {
             // console.log(data.response)
-            $(".web-btn").attr("href",data.response.workshop.web.url)
+            $(".web-btn").attr("href", data.response.workshop.web.url)
             html_start += `<div class="col-md-4">
 						<a href="${data.response.workshop.web.url}">
 							<div class="card p-4" role="button">
@@ -151,7 +242,7 @@ function scrollthere(item, event) {
           }
           if (data.response.workshop.flutter.status) {
             // console.log(data.response)
-            $(".flutter-btn").attr("href",data.response.workshop.flutter.url)
+            $(".flutter-btn").attr("href", data.response.workshop.flutter.url)
             html_start += `<div class="col-md-4">
 						<a href="${data.response.workshop.flutter.url}">
 							<div class="card p-4" role="button">
@@ -164,11 +255,11 @@ function scrollthere(item, event) {
 					</div>`;
             num += 1;
           }
-					if(num == 0){
-						html_start += '<h4 style="color: #fff;">Sorry, Registration Closed 😢</h4>'
-					}
-					html_start += '</div>'
-					$("#registrationForms").html(html_start);
+          if (num == 0) {
+            html_start += '<h4 style="color: #fff;">Sorry, Registration Closed 😢</h4>'
+          }
+          html_start += '</div>'
+          $("#registrationForms").html(html_start);
         }
       });
   });
@@ -624,7 +715,7 @@ function scrollthere(item, event) {
     },
   });
 
-  
+
 
   // Testimonials Slider JS
   $(".testimonials-slider").owlCarousel({
@@ -869,7 +960,7 @@ function toggleTheme() {
   if (localStorage.getItem("seku_theme") === "theme-light") {
     setTheme("theme-light");
     document.getElementById("slider").checked = true;
-    
+
   } else {
     setTheme("theme-dark");
     document.getElementById("slider").checked = false;
