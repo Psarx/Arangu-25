@@ -10955,6 +10955,24 @@ Latest News Area CSS
 /*================================================
 Footer Style Two Area CSS
 =================================================*/
+
+.footer-logo img {
+  width: 100px;
+}
+
+.footer-background {
+  background-image: url('../images/footer-bg-2.png');
+  text-align: center;
+}
+
+@media screen and (max-width:900px) {
+  .footer-background {
+    background-image: url('../images/footer-bg-mobile.png');
+    text-align: center;
+    background-size: cover;
+  }
+}
+
 .footer-style-two-with-color {
   background-color: #251533;
   overflow: hidden;
