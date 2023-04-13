@@ -100,6 +100,16 @@ function scrollthere(item, event) {
 
 
 }
+var setFlag = true
+function setFlagfunc(){
+  
+  setTimeout(()=>{
+    setFlag = true
+    console.log("Hiii",setFlag)
+  },3000)
+}
+
+
 
 (function ($) {
   "use strict";
@@ -109,9 +119,16 @@ function scrollthere(item, event) {
   });
 
   // Preloader JS
+  setFlagfunc()
+  // Preloader JS
   $(function () {
-    $("body").addClass("loaded");
+    setTimeout(()=>{
+      $("body").addClass("loaded")
+    },6000)
+      
+
   });
+
 
   //Forms Loader
   $(async function () {
