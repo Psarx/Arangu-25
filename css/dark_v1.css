@@ -30,7 +30,12 @@ Default CSS
 }
 
 .theme-dark .mean-container .mean-bar {
-  background: #222121;
+  /* background: #222121; */
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+  box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
 }
 
 .switch-box .switch {
@@ -166,7 +171,15 @@ Default CSS
 }
 
 .theme-dark .nav-area-six .navbar-area.is-sticky {
-  background-color: #222121;
+  /* background-color: #222121; */
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 8px;
+  -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+  box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
 }
 
 .theme-dark .nav-area-six .navbar-brand {
@@ -200,7 +213,14 @@ Default CSS
 }
 
 .theme-dark .seku-new-nav-area .navbar-area {
-  background-color: #222121;
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 8px;
+  -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+  box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
 }
 
 .theme-dark .copyright-style-two-with-color {
@@ -237,7 +257,15 @@ Default CSS
 }
 
 .theme-dark .seku-new-nav-area .navbar-area.is-sticky {
-  background-color: #222121;
+  /* background-color: #222121; */
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 8px;
+  -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+  box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
 }
 
 .theme-dark .seku-new-nav-area .others-option .option-item .search-btn {
