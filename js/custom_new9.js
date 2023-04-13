@@ -135,7 +135,7 @@ function setFlagfunc(){
     let html_start = `<div class="row mt-5 gy-3 justify-content-center">`
 
     await fetch(
-      "https://apiservices.geekstudios.tech/hackfit/auth/registration-status",
+      "https://apiservices.geekstudios.tech/nautilus/auth/registration-status",
       {
         method: "GET",
         headers: {
@@ -152,126 +152,136 @@ function setFlagfunc(){
         if (data.response_code == 200) {
           console.log(data.response)
           let num = 0;
-          if (data.response.hackathon.status) {
-            $(".hackfit-btn").attr("href", data.response.hackathon.url)
-            html_start += `<div class="col-md-4 ">
-						<a href="${data.response.hackathon.url}">
-							<div class="card p-4" role="button">
+          // if (data.response.hackathon.status) {
+          //   $(".hackfit-btn").attr("href", data.response.hackathon.url)
+          //   html_start += `<div class="col-md-4 ">
+					// 	<a href="${data.response.hackathon.url}">
+					// 		<div class="card p-4" role="button">
 							
-								<img src="./images/hackathon.jpg" alt="" srcset="">
-								<div class="card-body">
-									<p>HackFIT</p>
-								</div>
+					// 			<img src="./images/hackathon.jpg" alt="" srcset="">
+					// 			<div class="card-body">
+					// 				<p>HackFIT</p>
+					// 			</div>
 							
-							</div>
-						</a>
-					</div>`;
-            num += 1;
-          }
+					// 		</div>
+					// 	</a>
+					// </div>`;
+          //   num += 1;
+          // }
 
-          if (data.response.prompt_engineering.status) {
-            $('.promptly-').attr("href", data.response.prompt_engineering.url)
-            html_start += `<div class="col-md-4">
-						<a href="${data.response.prompt_engineering.url}">
-						<div class="card p-4" role="button">
-						<img src="./images/prompt.jpeg" alt="" srcset="">
-						<div class="card-body">
-							<p>PROMPTLY</p>
-						</div>
-					</div>
-				</a>
-					</div>`;
-            num += 1;
-          }
-          if (data.response.workshop.rust.status) {
-            $('.rust-btn').attr("href", data.response.workshop.rust.url)
-            html_start += `<div class="col-md-4">
-						<a href="${data.response.workshop.rust.url}">
-						<div class="card p-4" role="button">
-						<img src="https://icefoss.fisat.ac.in/images/rust.jpg" alt="" srcset="">
-						<div class="card-body">
-							<p>Rust Workshop</p>
-						</div>
-					</div>
-				</a>
-					</div>`;
-            num += 1;
-          }
-          if (data.response.workshop.ar.status) {
-            // console.log(data.response)
-            $(".ar-btn").attr("href", data.response.workshop.ar.url)
-            html_start += `<div class="col-md-4">
-						<a href="${data.response.workshop.ar.url}">
-							<div class="card p-4" role="button">
-								<img src="./images/workshop.jpeg" alt="" srcset="">
-								<div class="card-body">
-									<p>AR Workshop</p>
-								</div>
-							</div>
-						</a>
-					</div>`;
-            num += 1;
-          }
-          if (data.response.workshop.go.status) {
-            // console.log(data.response)
-            $(".go-btn").attr("href", data.response.workshop.go.url)
-            html_start += `<div class="col-md-4">
-						<a href="${data.response.workshop.go.url}">
-							<div class="card p-4" role="button">
-								<img src="./images/go.jpeg" alt="" srcset="">
-								<div class="card-body">
-									<p>GO Workshop</p>
-								</div>
-							</div>
-						</a>
-					</div>`;
-            num += 1;
-          }
-          if (data.response.workshop.devops.status) {
-            // console.log(data.response)
-            $(".devops-btn").attr("href", data.response.workshop.devops.url)
-            html_start += `<div class="col-md-4">
-						<a href="${data.response.workshop.devops.url}">
-							<div class="card p-4" role="button">
-								<img src="https://icefoss.fisat.ac.in/images/devops.jpg" alt="" srcset="">
-								<div class="card-body">
-									<p>DevOps Workshop</p>
-								</div>
-							</div>
-						</a>
-					</div>`;
-            num += 1;
-          }
-          if (data.response.workshop.web.status) {
-            // console.log(data.response)
-            $(".web-btn").attr("href", data.response.workshop.web.url)
-            html_start += `<div class="col-md-4">
-						<a href="${data.response.workshop.web.url}">
-							<div class="card p-4" role="button">
-								<img src="./images/web-dev.jpg" alt="" srcset="">
-								<div class="card-body">
-									<p>Web Workshop</p>
-								</div>
-							</div>
-						</a>
-					</div>`;
-            num += 1;
-          }
-          if (data.response.workshop.flutter.status) {
-            // console.log(data.response)
-            $(".flutter-btn").attr("href", data.response.workshop.flutter.url)
-            html_start += `<div class="col-md-4">
-						<a href="${data.response.workshop.flutter.url}">
-							<div class="card p-4" role="button">
-								<img src="https://icefoss.fisat.ac.in/images/flutter.jpg" alt="" srcset="">
-								<div class="card-body">
-									<p>Flutter Workshop</p>
-								</div>
-							</div>
-						</a>
-					</div>`;
-            num += 1;
-          }
+        //   if (data.response.prompt_engineering.status) {
+        //     $('.promptly-').attr("href", data.response.prompt_engineering.url)
+        //     html_start += `<div class="col-md-4">
+				// 		<a href="${data.response.prompt_engineering.url}">
+				// 		<div class="card p-4" role="button">
+				// 		<img src="./images/prompt.jpeg" alt="" srcset="">
+				// 		<div class="card-body">
+				// 			<p>PROMPTLY</p>
+				// 		</div>
+				// 	</div>
+				// </a>
+				// 	</div>`;
+        //     num += 1;
+        //   }
+          
+        $('.ar-btn').attr("href", data.response.workshop.ar.url)
+        $('.ble-btn').attr("href", data.response.workshop.ble.url)
+        $('.chatbot-btn').attr("href", data.response.workshop.chatbot.url)
+        $('.digital-btn').attr("href", data.response.workshop.digital.url)
+        $('.pottery-btn').attr("href", data.response.workshop.pottery.url)
+        $('.drone-btn').attr("href", data.response.workshop.drone.url)
+        $('.electric-btn').attr("href", data.response.workshop.electric.url)
+          
+          
+        //   if (data.response.workshop.rust.status) {
+        //     $('.rust-btn').attr("href", data.response.workshop.rust.url)
+        //     html_start += `<div class="col-md-4">
+				// 		<a href="${data.response.workshop.rust.url}">
+				// 		<div class="card p-4" role="button">
+				// 		<img src="https://icefoss.fisat.ac.in/images/rust.jpg" alt="" srcset="">
+				// 		<div class="card-body">
+				// 			<p>Rust Workshop</p>
+				// 		</div>
+				// 	</div>
+				// </a>
+				// 	</div>`;
+        //     num += 1;
+        //   }
+        //   if (data.response.workshop.ar.status) {
+        //     // console.log(data.response)
+        //     $(".ar-btn").attr("href", data.response.workshop.ar.url)
+        //     html_start += `<div class="col-md-4">
+				// 		<a href="${data.response.workshop.ar.url}">
+				// 			<div class="card p-4" role="button">
+				// 				<img src="./images/workshop.jpeg" alt="" srcset="">
+				// 				<div class="card-body">
+				// 					<p>AR Workshop</p>
+				// 				</div>
+				// 			</div>
+				// 		</a>
+				// 	</div>`;
+        //     num += 1;
+        //   }
+        //   if (data.response.workshop.go.status) {
+        //     // console.log(data.response)
+        //     $(".go-btn").attr("href", data.response.workshop.go.url)
+        //     html_start += `<div class="col-md-4">
+				// 		<a href="${data.response.workshop.go.url}">
+				// 			<div class="card p-4" role="button">
+				// 				<img src="./images/go.jpeg" alt="" srcset="">
+				// 				<div class="card-body">
+				// 					<p>GO Workshop</p>
+				// 				</div>
+				// 			</div>
+				// 		</a>
+				// 	</div>`;
+        //     num += 1;
+        //   }
+        //   if (data.response.workshop.devops.status) {
+        //     // console.log(data.response)
+        //     $(".devops-btn").attr("href", data.response.workshop.devops.url)
+        //     html_start += `<div class="col-md-4">
+				// 		<a href="${data.response.workshop.devops.url}">
+				// 			<div class="card p-4" role="button">
+				// 				<img src="https://icefoss.fisat.ac.in/images/devops.jpg" alt="" srcset="">
+				// 				<div class="card-body">
+				// 					<p>DevOps Workshop</p>
+				// 				</div>
+				// 			</div>
+				// 		</a>
+				// 	</div>`;
+        //     num += 1;
+        //   }
+        //   if (data.response.workshop.web.status) {
+        //     // console.log(data.response)
+        //     $(".web-btn").attr("href", data.response.workshop.web.url)
+        //     html_start += `<div class="col-md-4">
+				// 		<a href="${data.response.workshop.web.url}">
+				// 			<div class="card p-4" role="button">
+				// 				<img src="./images/web-dev.jpg" alt="" srcset="">
+				// 				<div class="card-body">
+				// 					<p>Web Workshop</p>
+				// 				</div>
+				// 			</div>
+				// 		</a>
+				// 	</div>`;
+        //     num += 1;
+        //   }
+        //   if (data.response.workshop.flutter.status) {
+        //     // console.log(data.response)
+        //     $(".flutter-btn").attr("href", data.response.workshop.flutter.url)
+        //     html_start += `<div class="col-md-4">
+				// 		<a href="${data.response.workshop.flutter.url}">
+				// 			<div class="card p-4" role="button">
+				// 				<img src="https://icefoss.fisat.ac.in/images/flutter.jpg" alt="" srcset="">
+				// 				<div class="card-body">
+				// 					<p>Flutter Workshop</p>
+				// 				</div>
+				// 			</div>
+				// 		</a>
+				// 	</div>`;
+        //     num += 1;
+        //   }
           if (num == 0) {
             html_start += '<h4 style="color: #fff;">Sorry, Registration Closed 😢</h4>'
           }
