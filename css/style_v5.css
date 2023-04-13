@@ -11043,13 +11043,13 @@ Footer Style Two Area CSS
 }
 
 .footer-background {
-  background-image: url('../images/footer-bg-2.png');
+  background-image: url('../images/footer-bg-2.webp');
   text-align: center;
 }
 
 @media screen and (max-width:900px) {
   .footer-background {
-    background-image: url('../images/footer-bg-mobile.png');
+    background-image: url('../images/footer-bg-mobile.webp');
     text-align: center;
     background-size: cover;
   }
