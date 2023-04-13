@@ -208,7 +208,7 @@ function setFlagfunc(){
             $('.pottery-btn').attr("href", data.response.workshop.pottery.url)
 
           }
-          if(!data.response.workshop.drone.status){
+          if(data.response.workshop.drone.status){
             $('.drone-btn').html("Register")
             $('.drone-btn').attr("href", data.response.workshop.drone.url)
 
