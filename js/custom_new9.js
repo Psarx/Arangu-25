@@ -327,7 +327,12 @@ function setFlagfunc(){
           }
           // html_start += '</div>'
         }
-      });
+      })
+      .catch(e => {
+        html_start += '<h4 style="color: #fff;">Sorry, Unable to process your request at this time. Please try again later 😢</h4>'
+        $("#registrationForms").html(html_start);
+    })
+    
   });
 
   // Nice Select JS
