@@ -191,31 +191,44 @@ function setFlagfunc(){
           if(data.response.workshop.ble.status){
             $('.ble-btn').html("Register")
             $('.ble-btn').attr("href", data.response.workshop.ble.url)
-
+            $('#ble-register-btn').show()
+            $('#ble-register-btn').attr("onclick", `location.href = '${data.response.workshop.ble.url}'`)
+            num += 1
           }
           if(data.response.workshop.chatbot.status){
             $('.chatbot-btn').html("Register")
             $('.chatbot-btn').attr("href", data.response.workshop.chatbot.url)
-
+            $('#chatbot-register-btn').show()
+            $('#chatbot-register-btn').attr("onclick", `location.href = '${data.response.workshop.chatbot.url}'`)
+            num += 1
           }
           if(data.response.workshop.digital.status){
             $('.digital-btn').html("Register")
             $('.digital-btn').attr("href", data.response.workshop.digital.url)
-
+            $('#digital-register-btn').show()
+            $('#digital-register-btn').attr("onclick", `location.href = '${data.response.workshop.digital.url}'`)
+            num += 1
           }
           if( data.response.workshop.pottery.status){
             $('.pottery-btn').html("Register")
             $('.pottery-btn').attr("href", data.response.workshop.pottery.url)
-
+            $('#pottery-register-btn').show()
+            $('#pottery-register-btn').attr("onclick", `location.href = '${data.response.workshop.pottery.url}'`)
+            num += 1
           }
           if(data.response.workshop.drone.status){
             $('.drone-btn').html("Register")
             $('.drone-btn').attr("href", data.response.workshop.drone.url)
-
+            $('#drone-register-btn').show()
+            $('#drone-register-btn').attr("onclick", `location.href = '${data.response.workshop.drone.url}'`)
+            num += 1
           }
           if(data.response.workshop.electric.status){
             $('.electric-btn').html("Register")
             $('.electric-btn').attr("href", data.response.workshop.electric.url)
+            $('#electric-register-btn').show()
+            $('#electric-register-btn').attr("onclick", `location.href = '${data.response.workshop.electric.url}'`)
+            num += 1
           }
           
           
@@ -310,11 +323,16 @@ function setFlagfunc(){
         //   }
           if (num == 0) {
             html_start += '<h4 style="color: #fff;">Sorry, Registration Closed 😢</h4>'
+            $("#registrationForms").html(html_start);
           }
-          html_start += '</div>'
-          $("#registrationForms").html(html_start);
+          // html_start += '</div>'
         }
-      });
+      })
+      .catch(e => {
+        html_start += '<h4 style="color: #fff;">Sorry, Unable to process your request at this time. Please try again later 😢</h4>'
+        $("#registrationForms").html(html_start);
+    })
+    
   });
 
   // Nice Select JS

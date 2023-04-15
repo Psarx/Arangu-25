@@ -11043,13 +11043,13 @@ Footer Style Two Area CSS
 }
 
 .footer-background {
-  background-image: url('../images/footer-bg-2.png') !important;
+  background-image: url('../images/footer-bg-2.webp');
   text-align: center;
 }
 
 @media screen and (max-width:900px) {
   .footer-background {
-    background-image: url('../images/footer-bg-mobile.png');
+    background-image: url('../images/footer-bg-mobile.webp');
     text-align: center;
     background-size: cover;
   }
@@ -11744,6 +11744,24 @@ Cyber Defenses Area CSS
   -webkit-transform: translateY(-10%);
   transform: translateY(-10%);
   z-index: -1;
+}
+
+.card-text {
+  text-transform: uppercase;
+}
+
+.card-img-top {
+  height: 200px;
+}
+
+.register-card {
+  display: none;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
