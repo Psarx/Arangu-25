@@ -8283,52 +8283,52 @@ Preloader Area Style*/
 #preloader path:nth-child(2){
   stroke-dasharray: 240;
   stroke-dashoffset: 240;
-  animation: line-anim 2s ease forwards .3s;
+  animation: line-anim 2s ease forwards;
 }
 #preloader path:nth-child(3){
   stroke-dasharray: 230;
   stroke-dashoffset: 230;
-  animation: line-anim 2s ease forwards .6s ;
+  animation: line-anim 2s ease forwards .2s ;
 }
 #preloader path:nth-child(4){
   stroke-dasharray: 199;
   stroke-dashoffset: 199;
-  animation: line-anim 2s ease forwards .9s;
+  animation: line-anim 2s ease forwards .2s;
 }
 #preloader path:nth-child(5){
   stroke-dasharray: 125;
   stroke-dashoffset: 125;
-  animation: line-anim 2s ease forwards 1.2s;
+  animation: line-anim 2s ease forwards .4s;
 }
 #preloader path:nth-child(6){
   stroke-dasharray: 176;
   stroke-dashoffset: 176;
-  animation: line-anim 2s ease forwards 1.5s;
+  animation: line-anim 2s ease forwards .4s;
 }
 #preloader path:nth-child(7){
   stroke-dasharray: 230;
   stroke-dashoffset: 230;
-  animation: line-anim 2s ease forwards 1.8s;
+  animation: line-anim 2s ease forwards .6s;
 }
 #preloader path:nth-child(8){
   stroke-dasharray: 197;
   stroke-dashoffset: 197;
-  animation: line-anim 2s ease forwards 2.1s;
+  animation: line-anim 2s ease forwards .6s;
 }
 #preloader path:nth-child(9){
   stroke-dasharray: 55;
   stroke-dashoffset: 55;
-  animation: line-anim 2s ease forwards 2.4s;
+  animation: line-anim 2s ease forwards .8s;
 }
 #preloader path:nth-child(10){
   stroke-dasharray: 143;
   stroke-dashoffset: 143;
-  animation: line-anim 2s ease forwards 2.7s;
+  animation: line-anim 2s ease forwards .8s;
 }
 #preloader path:nth-child(11){
   stroke-dasharray: 144;
   stroke-dashoffset: 144;
-  animation: line-anim 2s ease forwards 3s;
+  animation: line-anim 2s ease forwards .8s;
 }
 @keyframes line-anim{
   to {
