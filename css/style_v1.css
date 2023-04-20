@@ -9114,6 +9114,14 @@ Seku New Navbar Area CSS
   cursor: pointer
 }
 
+.seku-new-nav-area.nav-with-black-color .navbar-area .main-nav nav .navbar-nav .nav-item a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(127, 54, 104);
+  text-decoration-thickness: 3px;
+  transition: all 1s ease-in-out;
+  cursor: pointer
+}
+
 .seku-new-nav-area.nav-with-black-color .navbar-area.is-sticky {
   /* background: #191420; */
 }
@@ -11137,7 +11145,8 @@ Footer Style Two Area CSS
 }
 
 .single-footer-widget-card .custom-links li a:hover {
-  color: #400a6f;
+  color: #fff;
+  font-weight: 500;
   letter-spacing: 1px;
 }
 
