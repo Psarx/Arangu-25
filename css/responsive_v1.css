@@ -3325,7 +3325,8 @@
   }
 
   .mean-container .mean-bar {
-    background-color: rgba(255, 255, 255, 0.06);
+    /* background-color: rgba(255, 255, 255, 0.06); */
+    background-color:#05053097 !important;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
@@ -3524,4 +3525,4 @@ Continuer Custom Width Area Style*/
       }
     }
 
-    /*# sourceMappingURL=responsive.css.map */
+    /* # sourceMappingURL=responsive.css.map */

@@ -187,7 +187,9 @@ function setFlagfunc(){
         if(data.response.workshop.ar.status){
             $('.ar-btn').html("Register")
             $('.ar-btn').attr("href", data.response.workshop.ar.url)
-
+            $('#ar-register-btn').show()
+            $('#ar-register-btn').attr("onclick", `location.href = '${data.response.workshop.ar.url}'`)
+            num += 1
           }
           if(data.response.workshop.ble.status){
             $('.ble-btn').html("Register")
