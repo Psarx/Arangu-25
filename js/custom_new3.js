@@ -312,6 +312,13 @@ function setFlagfunc(){
             $('#valorant-register-btn').attr("onclick", `location.href = '${data.response.nontech.valorant.url}'`)
             num += 1
           }
+          if(data.response.nautilus.status){
+            $('#register-nautius').html("Get Your Tickets")
+            $('#register-nautius').attr("href", data.response.nautilus.url)
+            $('#nautilus').show()
+            $('#nautilus').attr("onclick", `location.href = '${data.response.nautilus.url}'`)
+            num += 1
+          }
         //   if (data.response.workshop.rust.status) {
         //     $('.rust-btn').attr("href", data.response.workshop.rust.url)
         //     html_start += `<div class="col-md-4">
