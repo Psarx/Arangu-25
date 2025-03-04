@@ -6,9 +6,9 @@ const elts = {
 
 // The strings to morph between. You can change these to anything you want!
 const texts = [
-  "അരങ്ങ്",  // Malayalam
-  "ARANGU",  // English
-  "अरंगु",  // Hindi
+  "അരങ്ങ്'25",  // Malayalam
+  "ARANGU'25",  // English
+  "अरंगु'25",  // Hindi
   // "அரங்கு",  // Tamil (Uncomment if needed)
   // "అరంగు",  // Telugu (Uncomment if needed)
 ];
