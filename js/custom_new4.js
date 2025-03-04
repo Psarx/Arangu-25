@@ -6,12 +6,13 @@ const elts = {
 
 // The strings to morph between. You can change these to anything you want!
 const texts = [
-  "നോട്ടിലസ്",
-  "Nautilus",
-  "नॉटिलस",
-  // "நாட்டிலஸ்",
-  // "నాటిలస్",
+  "അരങ്ങ്",  // Malayalam
+  "ARANGU",  // English
+  "अरंगु",  // Hindi
+  // "அரங்கு",  // Tamil (Uncomment if needed)
+  // "అరంగు",  // Telugu (Uncomment if needed)
 ];
+
 
 // Controls the speed of morphing.
 const morphTime = 2.50;
