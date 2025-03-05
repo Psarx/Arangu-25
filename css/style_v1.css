@@ -235,7 +235,7 @@ ul {
   -webkit-box-shadow: unset;
   box-shadow: unset;
   outline: 0;
-  border: 1px solid #400a6f;
+  border: 1px solid #4831D4;
 }
 
 .form-control:hover:focus,
@@ -314,7 +314,7 @@ textarea.form-control {
 }
 
 .buy-now-btn:hover {
-  background-color: #400a6f;
+  background-color: #4831D4;
   color: #ffffff;
 }
 
@@ -343,7 +343,7 @@ Default Btn Area Style*/
   text-align: center;
   overflow: hidden;
   z-index: 1;
-  background-color: #400a6f;
+  background-color: #4831D4;
 }
 
 .default-btn i {
@@ -473,11 +473,11 @@ Header Area Style
 }
 
 .header-area .top-header-area .header-content-left li:hover a {
-  color: #400a6f;
+  color: #4831D4;
 }
 
 .header-area .top-header-area .header-content-left li:hover a i {
-  color: #400a6f;
+  color: #4831D4;
 }
 
 .header-area .top-header-area .header-content-right {
@@ -503,11 +503,11 @@ Header Area Style
 }
 
 .header-area .top-header-area .header-content-right li:hover a {
-  color: #400a6f;
+  color: #4831D4;
 }
 
 .header-area .top-header-area .header-content-right li:hover a i {
-  color: #400a6f;
+  color: #4831D4;
 }
 
 /*
@@ -563,11 +563,11 @@ Nav Area Style
 }
 
 .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item a:hover {
-  color: #400a6f;
+  color: #4831D4;
 }
 
 .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item a.active {
-  color: #400a6f;
+  color: #4831D4;
 }
 
 .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu {
@@ -8452,7 +8452,7 @@ Go Top Style*/
   cursor: pointer;
   top: 85%;
   right: -10%;
-  background-color: #400a6f;
+  background-color: #4831D4;
   z-index: 4;
   width: 40px;
   text-align: center;
@@ -8501,7 +8501,7 @@ Go Top Style*/
 
 .go-top:hover {
   color: #ffffff;
-  background-color: #0e0129;
+  background-color: #4831D4;
 }
 
 .go-top:hover::before {
@@ -9102,7 +9102,7 @@ Seku New Navbar Area CSS
   padding: 15px 30px;
   border-radius: 5px;
   /* background-image: linear-gradient(136.1deg, #2a0749 1.84%, #400a6f 100%);; */
-  background-image: linear-gradient(136.1deg, #2a0749 1.84%, #400a6f 100%);
+  /* background-image: linear-gradient(136.1deg, #2a0749 1.84%, #400a6f 100%); */
 }
 
 /* .seku-new-nav-area.nav-with-black-color {
@@ -9546,7 +9546,7 @@ New Main Banner Area CSS
 .new-main-banner-black-content .banner-btn li .default-btn {
   padding: 15px 30px;
   border-radius: 5px;
-  background: linear-gradient(136.1deg, #2a0749 1.84%, #400a6f 100%);
+  /* background: linear-gradient(136.1deg, #2a0749 1.84%, #400a6f 100%); */
   ;
 }
 
@@ -11736,8 +11736,7 @@ Cyber Defenses Area CSS
 }
 
 .cyber-defenses-content .cyber-btn .default-btn {
-  background: linear-gradient(136.1deg, #2a0749 1.84%, #400a6f 100%);
-  ;
+  /* background: linear-gradient(136.1deg, #2a0749 1.84%, #400a6f 100%); */
   border-radius: 5px;
 }
 

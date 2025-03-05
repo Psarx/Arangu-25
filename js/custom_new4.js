@@ -132,296 +132,296 @@ function setFlagfunc(){
 
 
   //Forms Loader
-  $(async function () {
-    let html_start = `<div class="row mt-5 gy-3 justify-content-center">`
+  // $(async function () {
+  //   let html_start = `<div class="row mt-5 gy-3 justify-content-center">`
 
-    await fetch(
-      "https://apiservices.geekstudios.tech/nautilus/auth/registration-status",
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        mode: "cors",
-      }
-    )
-      .then((resp) => {
-        var data = resp.json();
-        return data;
-      })
-      .then((data) => {
-        if (data.response_code == 200) {
-          console.log(data.response)
-          let num = 0;
-          // if (data.response.hackathon.status) {
-          //   $(".hackfit-btn").attr("href", data.response.hackathon.url)
-          //   html_start += `<div class="col-md-4 ">
-					// 	<a href="${data.response.hackathon.url}">
-					// 		<div class="card p-4" role="button">
+  //   await fetch(
+  //     "https://apiservices.geekstudios.tech/nautilus/auth/registration-status",
+  //     {
+  //       method: "GET",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       mode: "cors",
+  //     }
+  //   )
+  //     .then((resp) => {
+  //       var data = resp.json();
+  //       return data;
+  //     })
+  //     .then((data) => {
+  //       if (data.response_code == 200) {
+  //         console.log(data.response)
+  //         let num = 0;
+  //         // if (data.response.hackathon.status) {
+  //         //   $(".hackfit-btn").attr("href", data.response.hackathon.url)
+  //         //   html_start += `<div class="col-md-4 ">
+	// 				// 	<a href="${data.response.hackathon.url}">
+	// 				// 		<div class="card p-4" role="button">
 							
-					// 			<img src="./images/hackathon.jpg" alt="" srcset="">
-					// 			<div class="card-body">
-					// 				<p>HackFIT</p>
-					// 			</div>
+	// 				// 			<img src="./images/hackathon.jpg" alt="" srcset="">
+	// 				// 			<div class="card-body">
+	// 				// 				<p>HackFIT</p>
+	// 				// 			</div>
 							
-					// 		</div>
-					// 	</a>
-					// </div>`;
-          //   num += 1;
-          // }
+	// 				// 		</div>
+	// 				// 	</a>
+	// 				// </div>`;
+  //         //   num += 1;
+  //         // }
 
-        //   if (data.response.prompt_engineering.status) {
-        //     $('.promptly-').attr("href", data.response.prompt_engineering.url)
-        //     html_start += `<div class="col-md-4">
-				// 		<a href="${data.response.prompt_engineering.url}">
-				// 		<div class="card p-4" role="button">
-				// 		<img src="./images/prompt.jpeg" alt="" srcset="">
-				// 		<div class="card-body">
-				// 			<p>PROMPTLY</p>
-				// 		</div>
-				// 	</div>
-				// </a>
-				// 	</div>`;
-        //     num += 1;
-        //   }
+  //       //   if (data.response.prompt_engineering.status) {
+  //       //     $('.promptly-').attr("href", data.response.prompt_engineering.url)
+  //       //     html_start += `<div class="col-md-4">
+	// 			// 		<a href="${data.response.prompt_engineering.url}">
+	// 			// 		<div class="card p-4" role="button">
+	// 			// 		<img src="./images/prompt.jpeg" alt="" srcset="">
+	// 			// 		<div class="card-body">
+	// 			// 			<p>PROMPTLY</p>
+	// 			// 		</div>
+	// 			// 	</div>
+	// 			// </a>
+	// 			// 	</div>`;
+  //       //     num += 1;
+  //       //   }
         
-        if(data.response.workshop.ar.status){
-            $('.ar-btn').html("Register")
-            $('.ar-btn').attr("href", data.response.workshop.ar.url)
-            $('#ar-register-btn').show()
-            $('#ar-register-btn').attr("onclick", `location.href = '${data.response.workshop.ar.url}'`)
-            num += 1
-          }
-          if(data.response.workshop.ble.status){
-            $('.ble-btn').html("Register")
-            $('.ble-btn').attr("href", data.response.workshop.ble.url)
-            $('#ble-register-btn').show()
-            $('#ble-register-btn').attr("onclick", `location.href = '${data.response.workshop.ble.url}'`)
-            num += 1
-          }
-          if(data.response.workshop.chatbot.status){
-            $('.chatbot-btn').html("Register")
-            $('.chatbot-btn').attr("href", data.response.workshop.chatbot.url)
-            $('#chatbot-register-btn').show()
-            $('#chatbot-register-btn').attr("onclick", `location.href = '${data.response.workshop.chatbot.url}'`)
-            num += 1
-          }
-          if(data.response.workshop.digital.status){
-            $('.digital-btn').html("Register")
-            $('.digital-btn').attr("href", data.response.workshop.digital.url)
-            $('#digital-register-btn').show()
-            $('#digital-register-btn').attr("onclick", `location.href = '${data.response.workshop.digital.url}'`)
-            num += 1
-          }
-          if( data.response.workshop.pottery.status){
-            $('.pottery-btn').html("Register")
-            $('.pottery-btn').attr("href", data.response.workshop.pottery.url)
-            $('#pottery-register-btn').show()
-            $('#pottery-register-btn').attr("onclick", `location.href = '${data.response.workshop.pottery.url}'`)
-            num += 1
-          }
-          if(data.response.workshop.drone.status){
-            $('.drone-btn').html("Register")
-            $('.drone-btn').attr("href", data.response.workshop.drone.url)
-            $('#drone-register-btn').show()
-            $('#drone-register-btn').attr("onclick", `location.href = '${data.response.workshop.drone.url}'`)
-            num += 1
-          }
-          if(data.response.workshop.electric.status){
-            $('.electric-btn').html("Register")
-            $('.electric-btn').attr("href", data.response.workshop.electric.url)
-            $('#electric-register-btn').show()
-            $('#electric-register-btn').attr("onclick", `location.href = '${data.response.workshop.electric.url}'`)
-            num += 1
-          }
+  //       if(data.response.workshop.ar.status){
+  //           $('.ar-btn').html("Register")
+  //           $('.ar-btn').attr("href", data.response.workshop.ar.url)
+  //           $('#ar-register-btn').show()
+  //           $('#ar-register-btn').attr("onclick", `location.href = '${data.response.workshop.ar.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.workshop.ble.status){
+  //           $('.ble-btn').html("Register")
+  //           $('.ble-btn').attr("href", data.response.workshop.ble.url)
+  //           $('#ble-register-btn').show()
+  //           $('#ble-register-btn').attr("onclick", `location.href = '${data.response.workshop.ble.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.workshop.chatbot.status){
+  //           $('.chatbot-btn').html("Register")
+  //           $('.chatbot-btn').attr("href", data.response.workshop.chatbot.url)
+  //           $('#chatbot-register-btn').show()
+  //           $('#chatbot-register-btn').attr("onclick", `location.href = '${data.response.workshop.chatbot.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.workshop.digital.status){
+  //           $('.digital-btn').html("Register")
+  //           $('.digital-btn').attr("href", data.response.workshop.digital.url)
+  //           $('#digital-register-btn').show()
+  //           $('#digital-register-btn').attr("onclick", `location.href = '${data.response.workshop.digital.url}'`)
+  //           num += 1
+  //         }
+  //         if( data.response.workshop.pottery.status){
+  //           $('.pottery-btn').html("Register")
+  //           $('.pottery-btn').attr("href", data.response.workshop.pottery.url)
+  //           $('#pottery-register-btn').show()
+  //           $('#pottery-register-btn').attr("onclick", `location.href = '${data.response.workshop.pottery.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.workshop.drone.status){
+  //           $('.drone-btn').html("Register")
+  //           $('.drone-btn').attr("href", data.response.workshop.drone.url)
+  //           $('#drone-register-btn').show()
+  //           $('#drone-register-btn').attr("onclick", `location.href = '${data.response.workshop.drone.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.workshop.electric.status){
+  //           $('.electric-btn').html("Register")
+  //           $('.electric-btn').attr("href", data.response.workshop.electric.url)
+  //           $('#electric-register-btn').show()
+  //           $('#electric-register-btn').attr("onclick", `location.href = '${data.response.workshop.electric.url}'`)
+  //           num += 1
+  //         }
 
-          //competition
-          if(data.response.competition.circuithunt.status){
-            $('.circuit-btn').html("Register")
-            $('.circuit-btn').attr("href", data.response.competition.circuithunt.url)
-            $('#circuit-register-btn').show()
-            $('#circuit-register-btn').attr("onclick", `location.href = '${data.response.competition.circuithunt.url}'`)
-            num += 1
-          }
-          if(data.response.competition.codinghunt.status){
-            $('.coding-btn').html("Register")
-            $('.coding-btn').attr("href", data.response.competition.codinghunt.url)
-            $('#coding-register-btn').show()
-            $('#coding-register-btn').attr("onclick", `location.href = '${data.response.competition.codinghunt.url}'`)
-            num += 1
-          }
-          if(data.response.competition.cad.status){
-            $('.cad-btn').html("Register")
-            $('.cad-btn').attr("href", data.response.competition.cad.url)
-            $('#cad-register-btn').show()
-            $('#cad-register-btn').attr("onclick", `location.href = '${data.response.competition.cad.url}'`)
-            num += 1
-          }
-          if(data.response.competition.spiromania.status){
-            $('.spiromania-btn').html("Register")
-            $('.spiromania-btn').attr("href", data.response.competition.spiromania.url)
-            $('#spiromania-register-btn').show()
-            $('#spiromania-register-btn').attr("onclick", `location.href = '${data.response.competition.spiromania.url}'`)
-            num += 1
-          }
-          if(data.response.competition.pitstop.status){
-            $('.pitstop-btn').html("Register")
-            $('.pitstop-btn').attr("href", data.response.competition.pitstop.url)
-            $('#pitstop-register-btn').show()
-            $('#pitstop-register-btn').attr("onclick", `location.href = '${data.response.competition.pitstop.url}'`)
-            num += 1
-          }
-          if(data.response.competition.robowar.status){
-            $('.robowar-btn').html("Register")
-            $('.robowar-btn').attr("href", data.response.competition.robowar.url)
-            $('#robowar-register-btn').show()
-            $('#robowar-register-btn').attr("onclick", `location.href = '${data.response.competition.robowar.url}'`)
-            num += 1
-          }
-          if(data.response.competition.robosoccer.status){
-            $('.robosoccer-btn').html("Register")
-            $('.robosoccer-btn').attr("href", data.response.competition.robosoccer.url)
-            $('#robosoccer-register-btn').show()
-            $('#robosoccer-register-btn').attr("onclick", `location.href = '${data.response.competition.robosoccer.url}'`)
-            num += 1
-          }
-          if(data.response.competition.convotron.status){
-            $('.convotron-btn').html("Register")
-            $('.convotron-btn').attr("href", data.response.competition.convotron.url)
-            $('#convotron-register-btn').show()
-            $('#convotron-register-btn').attr("onclick", `location.href = '${data.response.competition.convotron.url}'`)
-            num += 1
-          }
-          if(data.response.competition.line.status){
-            $('.line-btn').html("Register")
-            $('.line-btn').attr("href", data.response.competition.line.url)
-            $('#line-register-btn').show()
-            $('#line-register-btn').attr("onclick", `location.href = '${data.response.competition.line.url}'`)
-            num += 1
-          }
-          if(data.response.competition.double.status){
-            $('.double-btn').html("Register")
-            $('.double-btn').attr("href", data.response.competition.double.url)
-            $('#double-register-btn').show()
-            $('#double-register-btn').attr("onclick", `location.href = '${data.response.competition.double.url}'`)
-            num += 1
-          }
-          if(data.response.nontech.valorant.status){
-            $('.valorant-btn').html("Register")
-            $('.valorant-btn').attr("href", data.response.nontech.valorant.url)
-            $('#valorant-register-btn').show()
-            $('#valorant-register-btn').attr("onclick", `location.href = '${data.response.nontech.valorant.url}'`)
-            num += 1
-          }
-          if(data.response.nautilus.status){
-            $('#register-nautius').html("Get Your Tickets")
-            $('#register-nautius').attr("href", data.response.nautilus.url)
-            $('#nautilus').show()
-            $('#nautilus').attr("onclick", `location.href = '${data.response.nautilus.url}'`)
-            num += 1
-          }
-        //   if (data.response.workshop.rust.status) {
-        //     $('.rust-btn').attr("href", data.response.workshop.rust.url)
-        //     html_start += `<div class="col-md-4">
-				// 		<a href="${data.response.workshop.rust.url}">
-				// 		<div class="card p-4" role="button">
-				// 		<img src="https://icefoss.fisat.ac.in/images/rust.jpg" alt="" srcset="">
-				// 		<div class="card-body">
-				// 			<p>Rust Workshop</p>
-				// 		</div>
-				// 	</div>
-				// </a>
-				// 	</div>`;
-        //     num += 1;
-        //   }
-        //   if (data.response.workshop.ar.status) {
-        //     // console.log(data.response)
-        //     $(".ar-btn").attr("href", data.response.workshop.ar.url)
-        //     html_start += `<div class="col-md-4">
-				// 		<a href="${data.response.workshop.ar.url}">
-				// 			<div class="card p-4" role="button">
-				// 				<img src="./images/workshop.jpeg" alt="" srcset="">
-				// 				<div class="card-body">
-				// 					<p>AR Workshop</p>
-				// 				</div>
-				// 			</div>
-				// 		</a>
-				// 	</div>`;
-        //     num += 1;
-        //   }
-        //   if (data.response.workshop.go.status) {
-        //     // console.log(data.response)
-        //     $(".go-btn").attr("href", data.response.workshop.go.url)
-        //     html_start += `<div class="col-md-4">
-				// 		<a href="${data.response.workshop.go.url}">
-				// 			<div class="card p-4" role="button">
-				// 				<img src="./images/go.jpeg" alt="" srcset="">
-				// 				<div class="card-body">
-				// 					<p>GO Workshop</p>
-				// 				</div>
-				// 			</div>
-				// 		</a>
-				// 	</div>`;
-        //     num += 1;
-        //   }
-        //   if (data.response.workshop.devops.status) {
-        //     // console.log(data.response)
-        //     $(".devops-btn").attr("href", data.response.workshop.devops.url)
-        //     html_start += `<div class="col-md-4">
-				// 		<a href="${data.response.workshop.devops.url}">
-				// 			<div class="card p-4" role="button">
-				// 				<img src="https://icefoss.fisat.ac.in/images/devops.jpg" alt="" srcset="">
-				// 				<div class="card-body">
-				// 					<p>DevOps Workshop</p>
-				// 				</div>
-				// 			</div>
-				// 		</a>
-				// 	</div>`;
-        //     num += 1;
-        //   }
-        //   if (data.response.workshop.web.status) {
-        //     // console.log(data.response)
-        //     $(".web-btn").attr("href", data.response.workshop.web.url)
-        //     html_start += `<div class="col-md-4">
-				// 		<a href="${data.response.workshop.web.url}">
-				// 			<div class="card p-4" role="button">
-				// 				<img src="./images/web-dev.jpg" alt="" srcset="">
-				// 				<div class="card-body">
-				// 					<p>Web Workshop</p>
-				// 				</div>
-				// 			</div>
-				// 		</a>
-				// 	</div>`;
-        //     num += 1;
-        //   }
-        //   if (data.response.workshop.flutter.status) {
-        //     // console.log(data.response)
-        //     $(".flutter-btn").attr("href", data.response.workshop.flutter.url)
-        //     html_start += `<div class="col-md-4">
-				// 		<a href="${data.response.workshop.flutter.url}">
-				// 			<div class="card p-4" role="button">
-				// 				<img src="https://icefoss.fisat.ac.in/images/flutter.jpg" alt="" srcset="">
-				// 				<div class="card-body">
-				// 					<p>Flutter Workshop</p>
-				// 				</div>
-				// 			</div>
-				// 		</a>
-				// 	</div>`;
-        //     num += 1;
-        //   }
-          if (num == 0) {
-            html_start += '<h4 style="color: #fff;">Sorry, Registration Closed 😢</h4>'
-            $("#registrationForms").html(html_start);
-          }
-          // html_start += '</div>'
-        }
-      })
-      .catch(e => {
-        html_start += '<h4 style="color: #fff;">Sorry, Unable to process your request at this time. Please try again later 😢</h4>'
-        $("#registrationForms").html(html_start);
-    })
+  //         //competition
+  //         if(data.response.competition.circuithunt.status){
+  //           $('.circuit-btn').html("Register")
+  //           $('.circuit-btn').attr("href", data.response.competition.circuithunt.url)
+  //           $('#circuit-register-btn').show()
+  //           $('#circuit-register-btn').attr("onclick", `location.href = '${data.response.competition.circuithunt.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.competition.codinghunt.status){
+  //           $('.coding-btn').html("Register")
+  //           $('.coding-btn').attr("href", data.response.competition.codinghunt.url)
+  //           $('#coding-register-btn').show()
+  //           $('#coding-register-btn').attr("onclick", `location.href = '${data.response.competition.codinghunt.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.competition.cad.status){
+  //           $('.cad-btn').html("Register")
+  //           $('.cad-btn').attr("href", data.response.competition.cad.url)
+  //           $('#cad-register-btn').show()
+  //           $('#cad-register-btn').attr("onclick", `location.href = '${data.response.competition.cad.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.competition.spiromania.status){
+  //           $('.spiromania-btn').html("Register")
+  //           $('.spiromania-btn').attr("href", data.response.competition.spiromania.url)
+  //           $('#spiromania-register-btn').show()
+  //           $('#spiromania-register-btn').attr("onclick", `location.href = '${data.response.competition.spiromania.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.competition.pitstop.status){
+  //           $('.pitstop-btn').html("Register")
+  //           $('.pitstop-btn').attr("href", data.response.competition.pitstop.url)
+  //           $('#pitstop-register-btn').show()
+  //           $('#pitstop-register-btn').attr("onclick", `location.href = '${data.response.competition.pitstop.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.competition.robowar.status){
+  //           $('.robowar-btn').html("Register")
+  //           $('.robowar-btn').attr("href", data.response.competition.robowar.url)
+  //           $('#robowar-register-btn').show()
+  //           $('#robowar-register-btn').attr("onclick", `location.href = '${data.response.competition.robowar.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.competition.robosoccer.status){
+  //           $('.robosoccer-btn').html("Register")
+  //           $('.robosoccer-btn').attr("href", data.response.competition.robosoccer.url)
+  //           $('#robosoccer-register-btn').show()
+  //           $('#robosoccer-register-btn').attr("onclick", `location.href = '${data.response.competition.robosoccer.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.competition.convotron.status){
+  //           $('.convotron-btn').html("Register")
+  //           $('.convotron-btn').attr("href", data.response.competition.convotron.url)
+  //           $('#convotron-register-btn').show()
+  //           $('#convotron-register-btn').attr("onclick", `location.href = '${data.response.competition.convotron.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.competition.line.status){
+  //           $('.line-btn').html("Register")
+  //           $('.line-btn').attr("href", data.response.competition.line.url)
+  //           $('#line-register-btn').show()
+  //           $('#line-register-btn').attr("onclick", `location.href = '${data.response.competition.line.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.competition.double.status){
+  //           $('.double-btn').html("Register")
+  //           $('.double-btn').attr("href", data.response.competition.double.url)
+  //           $('#double-register-btn').show()
+  //           $('#double-register-btn').attr("onclick", `location.href = '${data.response.competition.double.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.nontech.valorant.status){
+  //           $('.valorant-btn').html("Register")
+  //           $('.valorant-btn').attr("href", data.response.nontech.valorant.url)
+  //           $('#valorant-register-btn').show()
+  //           $('#valorant-register-btn').attr("onclick", `location.href = '${data.response.nontech.valorant.url}'`)
+  //           num += 1
+  //         }
+  //         if(data.response.nautilus.status){
+  //           $('#register-nautius').html("Get Your Tickets")
+  //           $('#register-nautius').attr("href", data.response.nautilus.url)
+  //           $('#nautilus').show()
+  //           $('#nautilus').attr("onclick", `location.href = '${data.response.nautilus.url}'`)
+  //           num += 1
+  //         }
+  //       //   if (data.response.workshop.rust.status) {
+  //       //     $('.rust-btn').attr("href", data.response.workshop.rust.url)
+  //       //     html_start += `<div class="col-md-4">
+	// 			// 		<a href="${data.response.workshop.rust.url}">
+	// 			// 		<div class="card p-4" role="button">
+	// 			// 		<img src="https://icefoss.fisat.ac.in/images/rust.jpg" alt="" srcset="">
+	// 			// 		<div class="card-body">
+	// 			// 			<p>Rust Workshop</p>
+	// 			// 		</div>
+	// 			// 	</div>
+	// 			// </a>
+	// 			// 	</div>`;
+  //       //     num += 1;
+  //       //   }
+  //       //   if (data.response.workshop.ar.status) {
+  //       //     // console.log(data.response)
+  //       //     $(".ar-btn").attr("href", data.response.workshop.ar.url)
+  //       //     html_start += `<div class="col-md-4">
+	// 			// 		<a href="${data.response.workshop.ar.url}">
+	// 			// 			<div class="card p-4" role="button">
+	// 			// 				<img src="./images/workshop.jpeg" alt="" srcset="">
+	// 			// 				<div class="card-body">
+	// 			// 					<p>AR Workshop</p>
+	// 			// 				</div>
+	// 			// 			</div>
+	// 			// 		</a>
+	// 			// 	</div>`;
+  //       //     num += 1;
+  //       //   }
+  //       //   if (data.response.workshop.go.status) {
+  //       //     // console.log(data.response)
+  //       //     $(".go-btn").attr("href", data.response.workshop.go.url)
+  //       //     html_start += `<div class="col-md-4">
+	// 			// 		<a href="${data.response.workshop.go.url}">
+	// 			// 			<div class="card p-4" role="button">
+	// 			// 				<img src="./images/go.jpeg" alt="" srcset="">
+	// 			// 				<div class="card-body">
+	// 			// 					<p>GO Workshop</p>
+	// 			// 				</div>
+	// 			// 			</div>
+	// 			// 		</a>
+	// 			// 	</div>`;
+  //       //     num += 1;
+  //       //   }
+  //       //   if (data.response.workshop.devops.status) {
+  //       //     // console.log(data.response)
+  //       //     $(".devops-btn").attr("href", data.response.workshop.devops.url)
+  //       //     html_start += `<div class="col-md-4">
+	// 			// 		<a href="${data.response.workshop.devops.url}">
+	// 			// 			<div class="card p-4" role="button">
+	// 			// 				<img src="https://icefoss.fisat.ac.in/images/devops.jpg" alt="" srcset="">
+	// 			// 				<div class="card-body">
+	// 			// 					<p>DevOps Workshop</p>
+	// 			// 				</div>
+	// 			// 			</div>
+	// 			// 		</a>
+	// 			// 	</div>`;
+  //       //     num += 1;
+  //       //   }
+  //       //   if (data.response.workshop.web.status) {
+  //       //     // console.log(data.response)
+  //       //     $(".web-btn").attr("href", data.response.workshop.web.url)
+  //       //     html_start += `<div class="col-md-4">
+	// 			// 		<a href="${data.response.workshop.web.url}">
+	// 			// 			<div class="card p-4" role="button">
+	// 			// 				<img src="./images/web-dev.jpg" alt="" srcset="">
+	// 			// 				<div class="card-body">
+	// 			// 					<p>Web Workshop</p>
+	// 			// 				</div>
+	// 			// 			</div>
+	// 			// 		</a>
+	// 			// 	</div>`;
+  //       //     num += 1;
+  //       //   }
+  //       //   if (data.response.workshop.flutter.status) {
+  //       //     // console.log(data.response)
+  //       //     $(".flutter-btn").attr("href", data.response.workshop.flutter.url)
+  //       //     html_start += `<div class="col-md-4">
+	// 			// 		<a href="${data.response.workshop.flutter.url}">
+	// 			// 			<div class="card p-4" role="button">
+	// 			// 				<img src="https://icefoss.fisat.ac.in/images/flutter.jpg" alt="" srcset="">
+	// 			// 				<div class="card-body">
+	// 			// 					<p>Flutter Workshop</p>
+	// 			// 				</div>
+	// 			// 			</div>
+	// 			// 		</a>
+	// 			// 	</div>`;
+  //       //     num += 1;
+  //       //   }
+  //         if (num == 0) {
+  //           html_start += '<h4 style="color: #fff;">Sorry, Registration Closed 😢</h4>'
+  //           $("#registrationForms").html(html_start);
+  //         }
+  //         // html_start += '</div>'
+  //       }
+  //     })
+  //     .catch(e => {
+  //       html_start += '<h4 style="color: #fff;">Sorry, Unable to process your request at this time. Please try again later 😢</h4>'
+  //       $("#registrationForms").html(html_start);
+  //   })
     
-  });
+  // });
 
   // Nice Select JS
   $("select").niceSelect();
