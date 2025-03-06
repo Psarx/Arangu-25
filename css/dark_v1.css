@@ -201,11 +201,11 @@ Default CSS
 } */
 
 .theme-dark .seku-new-nav-area .navbar-area .main-nav nav .navbar-nav .nav-item a {
-  color: #807d82;
+  color: whitesmoke;
 }
 
 .theme-dark .seku-new-nav-area .navbar-area .main-nav nav .navbar-nav .nav-item a.active {
-  color: #9315ff;
+  color: #4831D4;
 }
 
 .theme-dark .footer-style-two-with-color {

@@ -117,13 +117,20 @@ a {
 .logo-hackfit {
   color: white
 }
+#text1 {
+  color: white; /* Change this to any color you like */
+}
+
+#text2 {
+  color: #4831D4; /* Change this to any color you like */
+}
 
 .section-left {
   background-color: #1c0531 !important
 }
 
 .section-right {
-  background-color: #280649 !important
+  background-color: #4831D4 !important
 }
 
 a:hover {
